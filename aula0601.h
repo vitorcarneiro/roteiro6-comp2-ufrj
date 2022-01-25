@@ -7,8 +7,8 @@ Prof. Marcelo Luiz Drumond Lanza
 Autor: Vitor Carneiro Silva de Oliveira
 Descricao: Prototipo da funcao MultiplicarMatrizes
 
-$Author$ 
-$Date$ 
+$Author$
+$Date$
 $Log$
 
 */
@@ -21,25 +21,44 @@ $Log$
 
 typedef enum
 {
-	ok,
-	matrizInvalida,
-	comprimentoExcedido
+    ok,
+    matrizInvalida,
+    comprimentoExcedido
 }tipoErros;
 
 tipoErros
 MultiplicarMatrizes(unsigned short, /* numero de linhas da matriz 1 (E) */
-                    unsigned short, /* numero de colunas da matriz 1 (E) */
-                    unsigned short, /* numero de linhas da matriz 2 (E) */
-                    unsigned short, /* numero de colunas da matriz 2 (E) */
-                    double [MAXIMO_LINHAS][MAXIMO_COLUNAS], /* matriz 1 (E) */
-                    double [MAXIMO_LINHAS][MAXIMO_COLUNAS], /* matriz 2 (E) */
-                    double [MAXIMO_LINHAS][MAXIMO_COLUNAS]); /* matriz produto (S) */
+    unsigned short, /* numero de colunas da matriz 1 (E) */
+    unsigned short, /* numero de linhas da matriz 2 (E) */
+    unsigned short, /* numero de colunas da matriz 2 (E) */
+    double[MAXIMO_LINHAS][MAXIMO_COLUNAS], /* matriz 1 (E) */
+    double[MAXIMO_LINHAS][MAXIMO_COLUNAS], /* matriz 2 (E) */
+    double[MAXIMO_LINHAS][MAXIMO_COLUNAS]); /* matriz produto (S) */
 
 tipoErros
-ObterMatrizTransposta (unsigned short, /* numero de linhas da matriz original (E) */
-                        unsigned short, /* numero de colunas da matriz original (E) */
-                        double[MAXIMO_LINHAS][MAXIMO_COLUNAS], /* matriz original (E) */
-                        double[MAXIMO_LINHAS][MAXIMO_COLUNAS]); /* matriz transposta (S) */
+ObterMatrizTransposta(unsigned short, /* numero de linhas da matriz original (E) */
+    unsigned short, /* numero de colunas da matriz original (E) */
+    double[MAXIMO_LINHAS][MAXIMO_COLUNAS], /* matriz original (E) */
+    double[MAXIMO_LINHAS][MAXIMO_COLUNAS]); /* matriz transposta (S) */
+
+tipoErros
+CalcularMenorComplementar(unsigned short, /* ordem da matriz (E) */
+    unsigned short, /* linha do elemento (E) */
+    unsigned short, /* coluna do elemento (E) */
+    double[MAXIMO_LINHAS][MAXIMO_COLUNAS], /* matriz (E) */
+    double*); /* menor complementar (S) */
+
+tipoErros
+CalcularComplementoAlgebrico(unsigned short, /* ordem da matriz (E) */
+    unsigned short, /* linha do elemento (E) */
+    unsigned short, /* coluna do elemento (E) */
+    double[MAXIMO_LINHAS][MAXIMO_COLUNAS], /* matriz (E) */
+    double*); /* complemento algebrico ou cofator (S) */
+
+tipoErros
+CalcularDeterminanteMatriz(unsigned short, /* ordem da matriz (E) */
+    double[MAXIMO_LINHAS][MAXIMO_COLUNAS], /* matriz (E) */
+    double*); /* determinante (S) */
 
 #endif 
 
