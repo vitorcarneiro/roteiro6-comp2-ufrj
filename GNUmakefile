@@ -104,11 +104,12 @@ AULA0506BOBJS = aula0504.o aula0506b.o
 # -- Roteiro 5 /\ ---------------------------------------------------------------------------------
 
 # -- Roteiro 6 \/ ---------------------------------------------------------------------------------
-AULA06 = aula0602 aula0603 aula0604
+AULA06 = aula0602 aula0603 aula0604 aula0605
 
 AULA0602OBJS = aula0601.o aula0602.o
 AULA0603OBJS = aula0601.o aula0603.o
 AULA0604OBJS = aula0601.o aula0604.o
+AULA0605OBJS = aula0601.o aula0605.o
 # -- Roteiro 6 /\ ---------------------------------------------------------------------------------
  
 # /\ OBJS MACROS/\ --------------------------------------------------------------------------------
@@ -161,7 +162,8 @@ EXECS = aula0101\
 		aula0506b\
 		aula0602\
 		aula0603\
-		aula0604
+		aula0604\
+		aula0605
 
 LIBS =	libmatematicarecursao.a\
 	libmatematicadowhile.a\
@@ -348,6 +350,10 @@ aula0603: $(AULA0603OBJS)
 
 aula0604: $(AULA0604OBJS)
 	$(LD) $(LFLAGS) -o $@ $(AULA0604OBJS)
+	cp -f $@ $@-$(OS)-$(CC)-$(DIALETO)
+
+aula0605: $(AULA0605OBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0605OBJS)
 	cp -f $@ $@-$(OS)-$(CC)-$(DIALETO)
 # -- Roteiro 6 /\ ----------------------------------------------------------------------------------
 
