@@ -1,4 +1,3 @@
-
 /*
 Universidade Federal do Rio de Janeiro
 Escola Politecnica
@@ -6,7 +5,7 @@ Departamento de Eletronica e de Computacao
 EEL270 - Computacao II - Turma 2021/2
 Prof. Marcelo Luiz Drumond Lanza
 Autor: Vitor Carneiro Silva de Oliveira
-Descricao : Codigo fonte funcao Multiplicar Matrizes
+Descricao : Codigo fonte funcao MultiplicarMatrizes - ObterMatrizTransposta
 
 $Author$
 $Date$
@@ -37,4 +36,22 @@ MultiplicarMatrizes(unsigned short numeroLinha1,
 		}
 			
     return ok;		
+}
+
+tipoErros
+ObterMatrizTransposta(unsigned short numeroLinhas,
+	unsigned short numeroColunas,
+	double matrizOriginal[MAXIMO_LINHAS][MAXIMO_COLUNAS],
+	double matrizTransposta[MAXIMO_LINHAS][MAXIMO_COLUNAS])
+{
+	unsigned short indiceLinha, indiceColuna;
+
+	if (numeroLinhas > MAXIMO_LINHAS || numeroColunas > MAXIMO_COLUNAS)
+		return comprimentoExcedido;
+	
+	for (indiceLinha = 0; indiceLinha < numeroLinhas; indiceLinha++)
+		for (indiceColuna = 0; indiceColuna < numeroColunas; indiceColuna++)
+			matrizTransposta[indiceColuna][indiceLinha] = matrizOriginal[indiceLinha][indiceColuna];
+	
+	return ok;
 }

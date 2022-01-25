@@ -104,9 +104,10 @@ AULA0506BOBJS = aula0504.o aula0506b.o
 # -- Roteiro 5 /\ ---------------------------------------------------------------------------------
 
 # -- Roteiro 6 \/ ---------------------------------------------------------------------------------
-AULA06 = aula0602
+AULA06 = aula0602 aula0603
 
 AULA0602OBJS = aula0601.o aula0602.o
+AULA0603OBJS = aula0601.o aula0603.o
 # -- Roteiro 6 /\ ---------------------------------------------------------------------------------
  
 # /\ OBJS MACROS/\ --------------------------------------------------------------------------------
@@ -119,6 +120,12 @@ LIBMATEMATICADOWHILEOBJS = aula0201b.o aula0301b.o aula0401b.o aula0403b.o
 LIBMATEMATICAFOROBJS = aula0201c.o aula0301c.o aula0401c.o aula0403c.o
 LIBMATEMATICAWHILEOBJS = aula0201d.o aula0301d.o aula0401d.o aula0403d.o
 # -- Roteiro 2 - 3 - 4 /\ ------------------------------------------------------------------------
+
+# -- Roteiro 6 \/ ---------------------------------------------------------------------------------
+LIBMATEMATICAOBJS = aula0601.o
+LIBMATEMATICA = libmatematica.a
+
+# -- Roteiro 6 /\ ---------------------------------------------------------------------------------
 # /\ LIBS MACROS/\ --------------------------------------------------------------------------------
 
 
@@ -151,14 +158,16 @@ EXECS = aula0101\
 		aula0505b\
 		aula0506a\
 		aula0506b\
-		aula0602
+		aula0602\
+		aula0603
 
 LIBS =	libmatematicarecursao.a\
 	libmatematicadowhile.a\
 	libmatematicafor.a\
 	libmatematicawhile.a\
 	libmonitor.a\
-	libbase.a
+	libbase.a\
+	libmatematica.a
 
 ALL = $(EXECS) $(LIBS)
 
@@ -328,6 +337,12 @@ aula0602: $(AULA0602OBJS)
 	$(LD) $(LFLAGS) -o $@ $(AULA0602OBJS)
 	cp -f $@ $@-$(OS)-$(CC)-$(DIALETO)
 
+libmatematica.a: $(LIBMATEMATICAOBJS)
+	ar -r -c $@ $(LIBMATEMATICAOBJS)
+
+aula0603: $(AULA0603OBJS)
+	$(LD) $(LFLAGS) -o $@ $(AULA0603OBJS)
+	cp -f $@ $@-$(OS)-$(CC)-$(DIALETO)
 # -- Roteiro 6 /\ ----------------------------------------------------------------------------------
 
 

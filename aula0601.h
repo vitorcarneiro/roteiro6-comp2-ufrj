@@ -35,6 +35,12 @@ MultiplicarMatrizes(unsigned short, /* numero de linhas da matriz 1 (E) */
                     double [MAXIMO_LINHAS][MAXIMO_COLUNAS], /* matriz 2 (E) */
                     double [MAXIMO_LINHAS][MAXIMO_COLUNAS]); /* matriz produto (S) */
 
+tipoErros
+ObterMatrizTransposta (unsigned short, /* numero de linhas da matriz original (E) */
+                        unsigned short, /* numero de colunas da matriz original (E) */
+                        double[MAXIMO_LINHAS][MAXIMO_COLUNAS], /* matriz original (E) */
+                        double[MAXIMO_LINHAS][MAXIMO_COLUNAS]); /* matriz transposta (S) */
+
 #endif 
 
 /*$RCSfile$*/
