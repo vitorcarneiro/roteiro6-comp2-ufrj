@@ -87,7 +87,7 @@ main(int argc, char *argv[])
 
 	if(aux != linhasMatriz1)
 	{	
-		printf("O valor para linhas da matriz deve ser no maximo %hu (unsigned short)\n", USHRT_MAX);
+		printf("O valor para linhas da matriz deve ser no maximo %d (unsigned short)\n", USHRT_MAX);
 		exit(ARGUMENTO_INVALIDO);
 	}
 
@@ -105,7 +105,7 @@ main(int argc, char *argv[])
 
 	if(aux != colunasMatriz1)
 	{
-		printf("O valor para colunas da matriz deve ser no maximo %hu (unsigned short)\n", USHRT_MAX);
+		printf("O valor para colunas da matriz deve ser no maximo %d (unsigned short)\n", USHRT_MAX);
 		exit(ARGUMENTO_INVALIDO);
 	}
 
@@ -123,7 +123,7 @@ main(int argc, char *argv[])
 
 	if(aux != linhasMatriz2)
 	{
-		printf("O valor para linhas da matriz deve ser no maximo %hu (unsigned short)\n", USHRT_MAX);
+		printf("O valor para linhas da matriz deve ser no maximo %d (unsigned short)\n", USHRT_MAX);
 		exit(ARGUMENTO_INVALIDO);
 	}
 
@@ -141,7 +141,7 @@ main(int argc, char *argv[])
 
 	if(aux != colunasMatriz2)
 	{
-		printf("O valor para colunas da matriz deve ser no maximo %hu (unsigned short)\n", USHRT_MAX);
+		printf("O valor para colunas da matriz deve ser no maximo %d (unsigned short)\n", USHRT_MAX);
 		exit(ARGUMENTO_INVALIDO);
 	}
 	
